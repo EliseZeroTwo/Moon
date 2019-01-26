@@ -3,7 +3,7 @@ layout: post
 title: "TP-Link HS100 Denial Of Service"
 date: 2019-01-26
 excerpt: "Performing denial of service attacks on a smartplug, by abusing TP-Link's bad encryption"
-tags: []
+tags: [vuln]
 comments: false
 ---
 ### Introduction
