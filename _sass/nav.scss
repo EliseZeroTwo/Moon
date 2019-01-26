@@ -96,7 +96,7 @@
 		}
 		&.dl-back > a {
 			padding-left: 30px;
-			background: rgba(0,0,0,0.2);
+			background: #FFAABB
 		}
 		&.dl-back:after,
 		> a:not(:only-child):after {
@@ -118,7 +118,7 @@
 		}
 		> a:after {
 			right: 10px;
-			color: rgba(0,0,0,0.15);
+			color: #FFAABB
 		}
 	}
 	.dl-menu {
