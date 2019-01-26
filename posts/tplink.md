@@ -1,4 +1,11 @@
-# TP-Link HS100 Denial Of Service
+---
+layout: post
+title: "TP-Link HS100 Denial Of Service"
+date: 2019-01-26
+excerpt: "Performing denial of service attacks on a smartplug, by abusing TP-Link's bad encryption"
+tags: []
+comments: false
+---
 ### Introduction
 The TP-Link HS100 is a smart plug in TP-Link's Kasa smarthome lineup
 
