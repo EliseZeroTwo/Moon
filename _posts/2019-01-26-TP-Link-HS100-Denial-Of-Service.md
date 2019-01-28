@@ -52,7 +52,8 @@ The following is just research I did after finding all this out in trying to get
 Unlike the HS100 counterpart (the HS110) the firmware files for the HS100 are not available directly on the project page. Luckily we know that there is too much trust going on between the Kasa app and the device. The Kasa app sends a command to the device which tells the device to download an update from the url provided as an argument in the command. Using this knowledge we log the network traffic and ask Kasa to update our device then unplugging the device from the wall as soon as it starts downloading it. This is safe because it does not flash anything until the firmware is fully downloaded. When decrypting the packet that tells the device to update the firmware we see this:
 
 ```
-{"system":{"download_firmware":{"url":"http://download.tplinkcloud.com/firmware/hs100v1_eu_1.2.5_Build_171213_Rel.101415_2017_1516879250467.bin"}}}```
+{"system":{"download_firmware":{"url":"http://download.tplinkcloud.com/firmware/hs100v1_eu_1.2.5_Build_171213_Rel.101415_2017_1516879250467.bin"}}}
+```
 
 So we now have a copy of the firmware. Putting this through binwalk we find out that it is U-Boot, a Linux Kernel, and a Sqaushfs. The squashfs does not have much in it, just BusyBox and a few other things (I have not spent more than 5 minutes looking around in it due to being busy). Cracking the login info using John The Ripper we find out that the login info is `root:media`. 
 
